@@ -20,6 +20,9 @@ A learning resource for coding interviews and technical assessments
 
 A practice ground for writing clean, efficient, and well-documented code
 
+---
+
+
 ### Contents
 Data Structures
 
@@ -38,6 +41,9 @@ Hash Tables / Dictionaries
 Heaps & Priority Queues
 
 Sets & Disjoint Sets (Union-Find)
+
+---
+
 
 ### Algorithms
 
@@ -58,6 +64,9 @@ Graph Traversal & Shortest Path
 Bit Manipulation
 
 Math & Number Theory (GCD, Prime Sieve, etc.)
+
+---
+
 
 ## Folder Structure
 ```
