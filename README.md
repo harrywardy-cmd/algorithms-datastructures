@@ -113,7 +113,7 @@ pip install -r requirements.txt
 
 Clone this repository:
 ```bash
-git clone https://github.com/<your-username>/algorithms-datastructures.git
+git clone https://github.com/harrywardy-cmd/algorithms-datastructures.git
 cd algorithms-datastructures
 ```
 
