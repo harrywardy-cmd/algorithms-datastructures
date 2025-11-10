@@ -10,7 +10,7 @@
 A personal collection of algorithms, data structures, and problem-solving exercises implemented in Python .
 This repository is designed for interview preparation, competitive programming, and improving core CS fundamentals.
 
-##Purpose
+## Purpose
 
 This repo serves as:
 
@@ -39,7 +39,7 @@ Heaps & Priority Queues
 
 Sets & Disjoint Sets (Union-Find)
 
-###Algorithms
+### Algorithms
 
 Sorting (Bubble, Merge, Quick, Heap, Counting, etc.)
 
@@ -59,7 +59,8 @@ Bit Manipulation
 
 Math & Number Theory (GCD, Prime Sieve, etc.)
 
-##Folder Structure
+## Folder Structure
+```
 algorithms-datastructures/
 │
 ├── algorithms/
@@ -76,9 +77,10 @@ algorithms-datastructures/
 │
 ├── tests/                 # Unit tests (optional)
 └── README.md              # Documentation
+```
+---
 
-
-##Learning Goals
+## Learning Goals
 
 Write efficient and readable code
 
