@@ -136,6 +136,7 @@ CS50 / MIT OpenCourseWare
 
 This project is licensed under the MIT License.
 Feel free to fork, study, and improve it.
+---
 ##  Author
 
 ** Harry Ward**  
