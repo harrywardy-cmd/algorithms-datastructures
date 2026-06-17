@@ -6,19 +6,28 @@
 
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        prev_node = None
-        current_node = head
+        # Base case: if the list is empty, return None
+        if not head:
+            return None
 
+        # Assume the current node is the new head initially
+        newHead = head
 
-        while current_node != None:
-            # save the next node 
-            next_node = current_node.next
-            #move the pointer to the previous node (this will detach the node, luckly we save the other nodes in next_node)
-            current_node.next = prev_node
-            # move up the previous node to the current node
-            prev_node = current_node
-            #move the current node to next one to move through the list
-            current_node = next_node
+        # If there is another node ahead,
+        # continue recursively until we reach the tail
+        if head.next:
+            # Reverse the rest of the list and get the new head
+            newHead = self.reverseList(head.next)
 
-        return prev_node
+            # Reverse the pointer:
+            # Example: 1 -> 2 becomes 1 <- 2
+            head.next.next = head
 
+        # Break the original forward link
+        # Prevents cycles in the reversed list
+        head.next = None
+
+        # Return the head of the reversed list
+        return newHead
+
+        
