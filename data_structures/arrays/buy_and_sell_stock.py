@@ -1,9 +1,21 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        maxP = 0                                        #current max profit 
-        minBuy = prices[0]               
+        # Tracks the maximum profit found so far
+        maxP = 0
 
+        # Lowest stock price seen so far (best day to buy)
+        minBuy = prices[0]
+
+        # Iterate through each stock price as a potential selling price
         for sell in prices:
-            maxP = max(maxP, sell - minBuy)            #find the max between max profit(maxP) stored outside the for loop and the current sell-minBuy
-            minBuy = min(minBuy, sell)                 #check if the sell is smaller then the minBuy outside the loop and will update it
-        return maxP                                    #return the minBuy, if the minBuy is greater then the sell the maxP will never be updated and return 0
+
+            # Calculate profit if we sell today using the
+            # lowest purchase price seen so far
+            maxP = max(maxP, sell - minBuy)
+
+            # Update the lowest buying price if a cheaper
+            # stock price is found
+            minBuy = min(minBuy, sell)
+
+        # Return the highest profit possible
+        return maxP
