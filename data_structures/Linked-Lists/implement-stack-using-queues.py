@@ -1,24 +1,37 @@
+from collections import deque
+
 class MyStack:
 
     def __init__(self):
+        # Use a queue (deque) as the underlying data structure.
+        # Although a queue is FIFO, we will simulate LIFO stack behavior.
         self.q = deque()
 
     def push(self, x: int) -> None:
-        self.q.append(x) # add to the top of the stack
-        
+        # Add the new element to the back of the queue.
+        # This represents pushing onto the top of the stack.
+        self.q.append(x)
 
     def pop(self) -> int:
-        for i in range(len(self.q)-1):      #will pop the bottom of the stack then push to the top untill x is now at the bottom of the stack
+        # Rotate all elements except the last one.
+        # Each front element is removed and added back to the end,
+        # moving the newest element to the front of the queue.
+        for i in range(len(self.q) - 1):
             self.push(self.q.popleft())
-        return self.q.popleft()             #return pop 
-        
+
+        # Remove and return the front element.
+        # After the rotation above, this is the "top" of the stack.
+        return self.q.popleft()
 
     def top(self) -> int:
-        return self.q[-1]   #return the top of the stack
+        # Return the last element in the queue,
+        # which represents the top of the stack.
+        return self.q[-1]
 
     def empty(self) -> bool:
-        return len(self.q) == 0 #check if stack is empty 
-        
+        # Return True if the queue contains no elements,
+        # otherwise return False.
+        return len(self.q) == 0
 
 
 # Your MyStack object will be instantiated and called as such:
